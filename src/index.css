@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Ovo&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Ovo", serif;
+  font-family: "Inter Tight", sans-serif;
+}
+
+.swiper-pagination-bullet {
+  background-color: #ffff !important;
+  width: 1rem !important;
+  height: 1rem !important;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffff !important;
+  text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
