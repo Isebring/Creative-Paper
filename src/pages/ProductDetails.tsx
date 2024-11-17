@@ -143,7 +143,7 @@ function ProductDetails() {
               order={3}
               align="center"
             >
-              About this {product.title}
+              About {product.title}
             </Title>
           </Box>
           <Text size="md" align="left" mt="md" data-cy="product-description">
