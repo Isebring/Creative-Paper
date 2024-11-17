@@ -1,9 +1,17 @@
-import { Box, Button, Group, Image, Input, Text } from '@mantine/core';
-import { IconMinus, IconPlus } from '@tabler/icons-react';
-import { useContext } from 'react';
-import { CartItem } from '../../data/index';
-import { ProductContext } from '../contexts/ProductContext';
-import { useShoppingCart } from '../contexts/ShoppingCartContext';
+import {
+  Box,
+  Button,
+  Group,
+  Image,
+  Input,
+  Text,
+  useMantineColorScheme,
+} from "@mantine/core";
+import { IconMinus, IconPlus } from "@tabler/icons-react";
+import { useContext } from "react";
+import { CartItem } from "../../data/index";
+import { ProductContext } from "../contexts/ProductContext";
+import { useShoppingCart } from "../contexts/ShoppingCartContext";
 
 interface Props {
   cartItem: CartItem;
@@ -11,6 +19,7 @@ interface Props {
 
 function CartProduct({ cartItem }: Props) {
   const { products } = useContext(ProductContext);
+  const { colorScheme } = useMantineColorScheme();
   const { increaseCartQuantity, decreaseCartQuantity, removeFromCart } =
     useShoppingCart();
   products.find((i) => i.id === cartItem.id);
@@ -20,10 +29,10 @@ function CartProduct({ cartItem }: Props) {
       mt="sm"
       p="sm"
       sx={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        '@media(max-width:721px)': {
-          flexDirection: 'column',
+        display: "flex",
+        justifyContent: "space-between",
+        "@media(max-width:721px)": {
+          flexDirection: "column",
         },
       }}
       data-cy="cart-item"
@@ -41,12 +50,16 @@ function CartProduct({ cartItem }: Props) {
         </Text>
       </Group>
       <Group>
-        <Group sx={{ display: 'flex' }} position="center" mt="xs" mb="xs">
-          {' '}
+        <Group sx={{ display: "flex" }} position="center" mt="xs" mb="xs">
+          {" "}
           <Button
-            variant="light"
+            style={{
+              borderColor: colorScheme === "dark" ? "#ADB5BD" : "#000",
+              color: colorScheme === "dark" ? "#ADB5BD" : "#000",
+            }}
+            variant="outline"
             mt="sm"
-            radius="sm"
+            radius="md"
             onClick={() => decreaseCartQuantity(cartItem.id)}
             data-cy="decrease-quantity-button"
           >
@@ -61,11 +74,15 @@ function CartProduct({ cartItem }: Props) {
             value={cartItem.quantity}
             rightSectionWidth="0px"
             sx={{
-              width: '1.2rem',
+              width: "1.2rem",
             }}
           />
           <Button
-            variant="light"
+            style={{
+              borderColor: colorScheme === "dark" ? "#ADB5BD" : "#000",
+              color: colorScheme === "dark" ? "#ADB5BD" : "#000",
+            }}
+            variant="outline"
             mt="sm"
             radius="md"
             onClick={() => increaseCartQuantity(cartItem.id)}
@@ -76,7 +93,7 @@ function CartProduct({ cartItem }: Props) {
         </Group>
         <Group position="center" mt="xs" mb="xs">
           <Text mt="sm" weight={500} size={15} data-cy="product-price">
-            x{cartItem.price * cartItem.quantity}€
+            x{cartItem.price * cartItem.quantity}$
           </Text>
         </Group>
       </Group>

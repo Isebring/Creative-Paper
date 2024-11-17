@@ -9,7 +9,6 @@ import {
 } from "@mantine/core";
 import { useContext } from "react";
 import { FormValues } from "../components/CheckoutForm";
-import initBackgroundAnimation from "../components/ConfirmationPageAnimation";
 import { ProductContext } from "../contexts/ProductContext";
 import { useShoppingCart } from "../contexts/ShoppingCartContext";
 
@@ -29,7 +28,6 @@ function Confirmation() {
       return total;
     }, 0);
   }
-  initBackgroundAnimation();
   return (
     <Container size="md" mt="xl" mb="xl">
       {lastOrder && formData && (
@@ -57,8 +55,7 @@ function Confirmation() {
               (product, index) =>
                 "id" in product && (
                   <List.Item key={index}>
-                    {product.title} - {product.price} € - Quantity:{" "}
-                    {product.quantity}
+                    {product.title} - ${product.price}
                     <Image
                       mt="md"
                       src={product.image}
@@ -66,12 +63,13 @@ function Confirmation() {
                       width={220}
                       fit="cover"
                     />
+                    Quantity: {product.quantity}
                   </List.Item>
                 )
             )}
           </List>
           <Divider mt="lg" mb="sm" size="xs" />
-          <h2>Total price: {calculateLastOrderTotal()}€</h2>
+          <h2>Total price: ${calculateLastOrderTotal()}</h2>
         </Card>
       )}
     </Container>

@@ -50,6 +50,7 @@ function AdminProductCard({ product, onDelete }: Props) {
           <Box pl="md" pr="md">
             <Group position="left" mt="sm" mb="sm">
               <Text
+                style={{ fontFamily: "Ove, serif" }}
                 weight={500}
                 size={29}
                 transform="uppercase"
@@ -116,7 +117,7 @@ function AdminProductCard({ product, onDelete }: Props) {
             align="right"
             data-cy="product-price"
           >
-            {product.price}€
+            ${product.price}
           </Title>
         </Group>
       </Card>

@@ -18,7 +18,7 @@ function Admin() {
 
   return (
     <Container size="xl">
-      <Title mb="lg" ta="center">
+      <Title mt="md" style={{ fontFamily: "Ove, serif" }} mb="lg" ta="center">
         Admin - Product Management
       </Title>
       <Group position="center" mb="xl">

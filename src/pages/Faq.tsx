@@ -5,8 +5,8 @@ import {
   createStyles,
   rem,
   Title,
-} from '@mantine/core';
-import { IconMessages } from '@tabler/icons-react';
+} from "@mantine/core";
+import { IconMessages } from "@tabler/icons-react";
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -21,25 +21,25 @@ const useStyles = createStyles((theme) => ({
     fontWeight: 900,
     lineHeight: 1,
     color:
-      theme.colorScheme === 'dark'
+      theme.colorScheme === "dark"
         ? theme.colors.dark[4]
         : theme.colors.gray[7],
-    [theme.fn.smallerThan('sm')]: {
+    [theme.fn.smallerThan("sm")]: {
       fontSize: rem(120),
     },
   },
 
   secondTitle: {
-    textAlign: 'center',
+    textAlign: "center",
     fontWeight: 900,
     fontSize: rem(38),
     marginBottom: rem(30),
     color:
-      theme.colorScheme === 'dark'
+      theme.colorScheme === "dark"
         ? theme.colors.dark[1]
         : theme.colors.gray[9],
 
-    [theme.fn.smallerThan('sm')]: {
+    [theme.fn.smallerThan("sm")]: {
       fontSize: rem(30),
     },
   },
@@ -48,7 +48,7 @@ const useStyles = createStyles((theme) => ({
     borderRadius: theme.radius.md,
     marginBottom: theme.spacing.lg,
     border: `${rem(1)} solid ${
-      theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[3]
+      theme.colorScheme === "dark" ? theme.colors.dark[4] : theme.colors.gray[3]
     }`,
   },
 }));
@@ -62,9 +62,9 @@ export function Faq() {
       </Title>
       <Box
         sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          marginBottom: '1.2rem',
+          display: "flex",
+          justifyContent: "center",
+          marginBottom: "1.2rem",
         }}
       >
         <IconMessages size="5rem" stroke="0.04rem" />
@@ -72,67 +72,62 @@ export function Faq() {
       <Title className={classes.secondTitle}>Frequently Asked Questions</Title>
 
       <Accordion variant="separated">
-        <Accordion.Item className={classes.item} value="reset-password">
+        <Accordion.Item className={classes.item} value="best-pen">
           <Accordion.Control>
-            What is the best laptop for gaming?
+            What is the best type of pen for writing?
           </Accordion.Control>
           <Accordion.Panel>
-            The best laptop for gaming would typically have a powerful
-            processor, dedicated graphics card, high RAM and storage capacity,
-            and a high refresh rate display. Some popular options include the
-            Asus ROG Zephyrus G14, Acer Predator Helios 300, and MSI GE75
-            Raider.
+            The best pen for writing depends on personal preference and usage.
+            Ballpoint pens are versatile and long-lasting, gel pens offer smooth
+            writing, and fountain pens are ideal for an elegant, calligraphic
+            feel. Consider factors like ink type, grip, and nib size when
+            choosing.
           </Accordion.Panel>
         </Accordion.Item>
 
-        <Accordion.Item className={classes.item} value="another-account">
+        <Accordion.Item className={classes.item} value="notebook-paper">
           <Accordion.Control>
-            What is the difference between an SSD and an HDD in a laptop?
+            What type of paper is best for note-taking?
           </Accordion.Control>
           <Accordion.Panel>
-            An SSD (Solid State Drive) is a type of storage device that uses
-            flash memory to store data, while an HDD (Hard Disk Drive) uses
-            spinning disks and a read/write head to access and store data. SSDs
-            are generally faster and more durable, while HDDs are less expensive
-            and have larger storage capacities.
+            For note-taking, opt for paper that is smooth and ink-friendly,
+            ideally with a weight of 70-90 GSM. If you’re using fountain pens or
+            markers, consider thicker, bleed-resistant paper such as 100 GSM or
+            higher.
           </Accordion.Panel>
         </Accordion.Item>
 
-        <Accordion.Item className={classes.item} value="newsletter">
+        <Accordion.Item className={classes.item} value="highlighter-bleed">
           <Accordion.Control>
-            How much RAM do I need in a laptop?
+            Do highlighters bleed through paper?
           </Accordion.Control>
           <Accordion.Panel>
-            The amount of RAM you need in a laptop depends on the tasks you plan
-            to perform. For basic tasks like web browsing and word processing,
-            8GB of RAM is usually sufficient. For more demanding tasks like
-            photo/video editing or gaming, 16GB or more may be necessary.
+            Highlighters can bleed through thinner paper, especially if pressed
+            hard or used repeatedly over the same area. To avoid this, use
+            highlighters labeled as "no bleed" or use paper with a higher GSM
+            rating.
           </Accordion.Panel>
         </Accordion.Item>
 
-        <Accordion.Item className={classes.item} value="credit-card">
-          <Accordion.Control>
-            What is the battery life of a typical laptop?
-          </Accordion.Control>
+        <Accordion.Item className={classes.item} value="erasable-pens">
+          <Accordion.Control>Are erasable pens reliable?</Accordion.Control>
           <Accordion.Panel>
-            The battery life of a laptop varies depending on the model and
-            usage. Most laptops have a battery life of 5-8 hours, but some
-            high-end models can last up to 12 hours or more. Battery life can
-            also be affected by factors such as screen brightness, CPU usage,
-            and connectivity options.
+            Erasable pens are convenient for making corrections, but their ink
+            may fade over time and is less permanent than regular pens. They are
+            best suited for temporary notes or drafts rather than official
+            documents.
           </Accordion.Panel>
         </Accordion.Item>
 
-        <Accordion.Item className={classes.item} value="payment">
+        <Accordion.Item className={classes.item} value="organizer-choice">
           <Accordion.Control>
-            What is the warranty period for a laptop?
+            What’s the best organizer for managing tasks?
           </Accordion.Control>
           <Accordion.Panel>
-            The warranty period for a laptop varies depending on the
-            manufacturer and model. Most laptops come with a one-year warranty,
-            but some manufacturers offer longer warranties of two or three
-            years. It's important to check the warranty details before making a
-            purchase to ensure you are covered for any potential issues.
+            The best organizer depends on your needs. For detailed planning,
+            consider a planner with daily, weekly, and monthly layouts. Bullet
+            journals are great for customization, while desk organizers are
+            ideal for a visual overview of tasks and deadlines.
           </Accordion.Panel>
         </Accordion.Item>
       </Accordion>

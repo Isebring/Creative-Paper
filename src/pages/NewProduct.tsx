@@ -1,7 +1,7 @@
-import { Container, Group, Title } from '@mantine/core';
-import { useContext } from 'react';
-import ProductForm from '../components/ProductForm';
-import { ProductContext } from '../contexts/ProductContext';
+import { Container, Group, Title } from "@mantine/core";
+import { useContext } from "react";
+import ProductForm from "../components/ProductForm";
+import { ProductContext } from "../contexts/ProductContext";
 
 function NewProduct() {
   const { addProduct } = useContext(ProductContext);
@@ -9,7 +9,9 @@ function NewProduct() {
   return (
     <Container>
       <Group position="center" mb="xl">
-        <Title>New Product</Title>
+        <Title mt="md" style={{ fontFamily: "Ove, serif" }}>
+          New Product
+        </Title>
       </Group>
       <ProductForm
         onSubmit={addProduct}

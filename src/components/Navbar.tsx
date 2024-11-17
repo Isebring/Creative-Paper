@@ -133,14 +133,14 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   const logo =
     logoType === "dark" ? (
       <Image
-        height="80%"
+        height="2.5rem"
         width={logoSize}
         src="../../public/assets/logoCreative.svg"
         alt="Creative Paper logo"
       />
     ) : (
       <Image
-        height="80%"
+        height="2.5rem"
         width={logoSize}
         src="../../public/assets/logoCreativeLight.svg"
         alt="Creative Paper logo"
