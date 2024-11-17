@@ -143,7 +143,7 @@ export function FooterCentered({ links }: FooterCenteredProps) {
           </form>
         </Box>
 
-        <Group spacing="xs" position="right" noWrap mt={10}>
+        <Group spacing="xs" position="right" noWrap mt={20}>
           <ActionIcon
             size="lg"
             variant="outline"

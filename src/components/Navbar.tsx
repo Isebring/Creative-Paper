@@ -135,14 +135,14 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
       <Image
         height="2.5rem"
         width={logoSize}
-        src="../../public/assets/logoCreative.svg"
+        src="../../assets/logoCreative.svg"
         alt="Creative Paper logo"
       />
     ) : (
       <Image
         height="2.5rem"
         width={logoSize}
-        src="../../public/assets/logoCreativeLight.svg"
+        src="../../assets/logoCreativeLight.svg"
         alt="Creative Paper logo"
       />
     );

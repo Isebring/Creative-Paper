@@ -44,8 +44,8 @@ function ProductCard({ product }: Props) {
             <Image
               src={product.image}
               height={230}
-              fit="cover"
-              sx={{ backgroundColor: "white" }}
+              fit="contain"
+              sx={{ backgroundColor: "#F3F8F9" }}
             />
             <Box pl="md" pr="md">
               <Group

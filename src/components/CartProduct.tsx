@@ -37,7 +37,13 @@ function CartProduct({ cartItem }: Props) {
       }}
       data-cy="cart-item"
     >
-      <Image src={cartItem.image} height={150} width={220} fit="cover" />
+      <Image
+        src={cartItem.image}
+        height={150}
+        width={220}
+        fit="contain"
+        sx={{ backgroundColor: "#F3F8F9" }}
+      />
 
       <Group position="center" pl="xs" pr="xs" mt="sm" mb="sm">
         <Text

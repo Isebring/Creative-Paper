@@ -58,7 +58,7 @@ function ProductDetails() {
       <Button
         variant="outline"
         mb="sm"
-        mt="sm"
+        mt="xl"
         onClick={goBack}
         sx={{
           borderColor: colorScheme === "dark" ? "#ADB5BD" : "#000",
@@ -113,6 +113,7 @@ function ProductDetails() {
           >
             <SwiperSlide>
               <Image
+                sx={{ backgroundColor: "#F3F8F9" }}
                 src={product.image}
                 key={product.id}
                 alt={product.title}

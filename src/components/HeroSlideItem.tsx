@@ -58,20 +58,23 @@ function HeroSlideItem({ imageSrc }: HeroSlideItemProps) {
               styles={{ width: "6.3rem", height: "2rem", fontSize: rem(12) }}
             >
               <Button
+                variant="outline"
+                color="dark"
+                radius="md"
                 sx={{
-                  background: "black",
-                  color: "white",
+                  // background: "black",
+                  // color: "white",
                   fontWeight: "bold",
                   marginTop: "1rem",
                   height: "2.4rem",
                   width: "8rem",
-                  borderRadius: ".5rem",
-                  borderStyle: "none",
+                  // borderRadius: ".5rem",
+                  // borderStyle: "none",
                   cursor: "pointer",
-                  "&:hover": {
-                    background: theme.colors.violet[4],
-                    color: theme.colors.violet[0],
-                  },
+                  // "&:hover": {
+                  //   background: theme.colors.violet[4],
+                  //   color: theme.colors.violet[0],
+                  // },
                 }}
                 style={{ fontFamily: "Poppins, sans-serif" }}
               >
@@ -86,7 +89,12 @@ function HeroSlideItem({ imageSrc }: HeroSlideItemProps) {
         >
           <Box sx={{ width: "50%", height: "100%" }}>
             <img
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "contain",
+                backgroundColor: "#F3F8F9",
+              }}
               src={imageSrc}
               alt="product-image"
             />

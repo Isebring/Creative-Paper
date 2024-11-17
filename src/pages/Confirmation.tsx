@@ -32,10 +32,12 @@ function Confirmation() {
     <Container size="md" mt="xl" mb="xl">
       {lastOrder && formData && (
         <Card shadow="md" sx={{ textAlign: "center" }}>
-          <Title order={1}>Thank you for your order!</Title>
-          <Divider mt="md" mb="sm" size="xs" />
+          <Title mb="md" order={1}>
+            Thank you for your order!
+          </Title>
+
           <Text>We have sent a confirmation to: {formData.email}</Text>
-          <Text>Your order number: {lastOrder.id}</Text>
+          <Text italic>Your order number: {lastOrder.id}</Text>
           <Divider mt="md" mb="sm" size="xs" />
           <Title mb="xs" order={2}>
             Order details:
@@ -54,21 +56,27 @@ function Confirmation() {
             {lastOrder.cartProducts.map(
               (product, index) =>
                 "id" in product && (
-                  <List.Item key={index}>
-                    {product.title} - ${product.price}
-                    <Image
-                      mt="md"
-                      src={product.image}
-                      height={150}
-                      width={220}
-                      fit="cover"
-                    />
-                    Quantity: {product.quantity}
-                  </List.Item>
+                  <div key={index}>
+                    <List.Item>
+                      {product.title} - ${product.price}
+                      <Image
+                        sx={{ backgroundColor: "#F3F8F9" }}
+                        mt="sm"
+                        mb="sm"
+                        src={product.image}
+                        height={150}
+                        width={220}
+                        fit="contain"
+                      />
+                      Quantity: {product.quantity}
+                    </List.Item>
+                    {index < lastOrder.cartProducts.length - 1 && (
+                      <Divider mt="md" mb="md" size="xs" />
+                    )}
+                  </div>
                 )
             )}
           </List>
-          <Divider mt="lg" mb="sm" size="xs" />
           <h2>Total price: ${calculateLastOrderTotal()}</h2>
         </Card>
       )}

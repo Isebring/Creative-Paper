@@ -102,7 +102,7 @@ function CheckoutForm() {
           autoComplete="street-address"
           withAsterisk
           label="Adress"
-          placeholder="ex: Bigboiroad 31"
+          placeholder="ex: Myroad 123"
           {...form.getInputProps("adress")}
           data-cy="customer-address"
           errorProps={{ "data-cy": "customer-address-error" }}
